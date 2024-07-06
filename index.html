@@ -6,9 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <link rel="icon" href="favicon.ico">
-  <meta property="article:author" content="Mayank">
+  <meta property="article:author" content="https://www.linkedin.com/in/erangadulshan">
   <meta property="og:title" content="X-OAuth 2.0 - React Native">
-  <meta property="og:description" content="Mayank">
+  <meta property="og:description" content="X-OAuth 2.0 - React Native">
   <meta property="og:image" content="https://avatars.githubusercontent.com/u/17006912?v=4">
   <title>Social Login React Native</title>
   <style>
@@ -23,53 +23,53 @@
       background-color: #f4f4f4;
     }
 
-    header {
+    .container {
       text-align: center;
+      background-color: #ffffff;
       padding: 20px;
-      background-color: #007bff;
-      color: white;
       border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       width: 90%;
-      max-width: 400px;
+      max-width: 300px;
     }
 
     h1 {
       margin: 0;
       font-size: 1.5em;
+      color: #333333;
     }
 
     h2 {
       margin: 0;
+      margin-top: 10px;
       font-size: 1em;
       font-weight: normal;
+      color: #666666;
     }
 
     #redirect {
-      display: inline-block;
+      display: block;
       margin-top: 20px;
-      padding: 10px 20px;
+      padding: 10px;
       font-size: 1em;
       color: white;
-      background-color: #28a745;
+      background-color: #007bff;
       text-decoration: none;
       border-radius: 5px;
       transition: background-color 0.3s ease;
     }
 
     #redirect:hover {
-      background-color: #218838;
+      background-color: #0056b3;
     }
   </style>
 </head>
 
 <body>
-  <header>
-    <div class="inner">
-      <h1>Mayank is Here :- </h1>
-      <h2>Redirecting to your deep link...</h2>
-    </div>
-  </header>
+  <div class="container">
+    <h1>React Native X Login</h1>
+    <h2>Redirecting to your deep link...</h2>
+  </div>
 
   <script type="text/javascript">
     function parse_query_string(query) {
@@ -99,7 +99,7 @@
       buttonRedirect.setAttribute('id', 'redirect');
       buttonRedirect.setAttribute('href', link);
       buttonRedirect.innerText = "Click here to navigate back to the app.";
-      document.body.appendChild(buttonRedirect);
+      document.querySelector('.container').appendChild(buttonRedirect);
     } else {
       alert("'redirect_url' query string param is missing.");
     }

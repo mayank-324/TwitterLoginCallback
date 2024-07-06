@@ -47,6 +47,7 @@
     var qs = parse_query_string(query);
     if (qs.redirect_url) {
       var link = qs.redirect_url + '?code=' + qs.code + '&state=' + qs.state;
+      window.location.href = link;
       var buttonRedirect = document.createElement('a');
       buttonRedirect.setAttribute('id', 'redirect');
       buttonRedirect.setAttribute('href', link);
